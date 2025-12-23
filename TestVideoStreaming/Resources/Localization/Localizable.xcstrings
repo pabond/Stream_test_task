@@ -1,0 +1,97 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "configuration_all_fiels_required_error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All fields are required"
+          }
+        }
+      }
+    },
+    "configuration_incorrect_url_format_error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid RTMP URL format"
+          }
+        }
+      }
+    },
+    "configuration_key_empty_error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Key is required"
+          }
+        }
+      }
+    },
+    "configuration_key_placeholder" : {
+      "comment" : "Configuration key placeholder",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stream Key"
+          }
+        }
+      }
+    },
+    "configuration_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuration"
+          }
+        }
+      }
+    },
+    "configuration_to_stream_title" : {
+      "comment" : "Go to Stream button title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go to Stream"
+          }
+        }
+      }
+    },
+    "configuration_url_empty_error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL is required"
+          }
+        }
+      }
+    },
+    "configuration_url_placeholder" : {
+      "comment" : "Configuration url placeholder",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Server URL (rtmp://...)"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
