@@ -14,9 +14,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let navigationController = UINavigationController(rootViewController: ConfigurationViewController())
+        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.tintColor = .black
+        
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        window.rootViewController = ConfigurationViewController()
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
 
