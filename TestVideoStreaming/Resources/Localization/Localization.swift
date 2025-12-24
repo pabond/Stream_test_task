@@ -14,6 +14,7 @@ enum Localization: String {
     case configuration_all_fiels_required_error
     case configuration_key_empty_error
     case configuration_incorrect_url_format_error
+    case done_button_title
 }
 
 extension Localization {

@@ -91,6 +91,17 @@
           }
         }
       }
+    },
+    "done_button_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

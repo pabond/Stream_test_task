@@ -112,15 +112,15 @@ class ConfigurationViewController: UIViewController {
         }
     }
     
-    private func fillFromStorage() {
-        urlTextField.text = storage.urlString
-        keyTextField.text = storage.keyString
-    }
-    
     /// move to StreamViewController
     private func proceedToStream() {
         let streamViewController = StreamViewController(storage: storage)
         navigationController?.pushViewController(streamViewController, animated: true)
+    }
+    
+    private func fillFromStorage() {
+        urlTextField.text = storage.urlString
+        keyTextField.text = storage.keyString
     }
     
     private func showError(urlError: Bool, keyError: Bool, message: String) {
