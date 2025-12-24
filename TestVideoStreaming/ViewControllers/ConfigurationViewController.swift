@@ -7,11 +7,6 @@
 
 import UIKit
 
-private enum StorageKeys: String {
-    case url
-    case key
-}
-
 class ConfigurationViewController: UIViewController {
     
     private let urlTextField = PaddedTextField()
@@ -19,12 +14,24 @@ class ConfigurationViewController: UIViewController {
     private let actionButton = UIButton(type: .system)
     private let errorLabel = UILabel()
     
+    private var storage: StreamingStorage
+    
+    init(storage: StreamingStorage = UserDefaultsStorage()) {
+        self.storage = storage
+        super.init(nibName: nil, bundle: nil)
+    }
+        
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+        
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         setupConstraints()
+        fillFromStorage()
     }
     
     // MARK: UISetup
@@ -99,15 +106,20 @@ class ConfigurationViewController: UIViewController {
         if urlError || keyError {
             showError(urlError: urlError, keyError: keyError, message: message)
         } else {
-            UserDefaults.standard.set(url, forKey: StorageKeys.url.rawValue)
-            UserDefaults.standard.set(key, forKey: StorageKeys.key.rawValue)
+            storage.urlString = url
+            storage.keyString = key
             proceedToStream()
         }
     }
     
+    private func fillFromStorage() {
+        urlTextField.text = storage.urlString
+        keyTextField.text = storage.keyString
+    }
+    
     /// move to StreamViewController
     private func proceedToStream() {
-        let streamViewController = StreamViewController()
+        let streamViewController = StreamViewController(storage: storage)
         navigationController?.pushViewController(streamViewController, animated: true)
     }
     
@@ -125,7 +137,10 @@ class ConfigurationViewController: UIViewController {
         
         shakeAnimation()
     }
-    
+}
+
+// MARK: ConfigurationViewController + validation animation
+private extension ConfigurationViewController {
     private func resetStyle(for textField: UITextField) {
         textField.layer.borderColor = UIColor.systemGray4.cgColor
         textField.layer.borderWidth = 1.0
