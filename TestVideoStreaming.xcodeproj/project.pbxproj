@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		47EF52E22EFC5E24006B7EBE /* HaishinKit in Frameworks */ = {isa = PBXBuildFile; productRef = 47EF52E12EFC5E24006B7EBE /* HaishinKit */; };
+		47EF52E42EFC5E24006B7EBE /* RTMPHaishinKit in Frameworks */ = {isa = PBXBuildFile; productRef = 47EF52E32EFC5E24006B7EBE /* RTMPHaishinKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		478669BE2EF867810068489F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47EF52E22EFC5E24006B7EBE /* HaishinKit in Frameworks */,
+				47EF52E42EFC5E24006B7EBE /* RTMPHaishinKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +132,8 @@
 			);
 			name = TestVideoStreaming;
 			packageProductDependencies = (
+				47EF52E12EFC5E24006B7EBE /* HaishinKit */,
+				47EF52E32EFC5E24006B7EBE /* RTMPHaishinKit */,
 			);
 			productName = TestVideoStreaming;
 			productReference = 478669A72EF8677F0068489F /* TestVideoStreaming.app */;
@@ -208,6 +217,9 @@
 			);
 			mainGroup = 4786699E2EF8677F0068489F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				47EF52E02EFC5E24006B7EBE /* XCRemoteSwiftPackageReference "HaishinKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 478669A82EF8677F0068489F /* Products */;
 			projectDirPath = "";
@@ -296,6 +308,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +336,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -565,6 +579,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		47EF52E02EFC5E24006B7EBE /* XCRemoteSwiftPackageReference "HaishinKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HaishinKit/HaishinKit.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		47EF52E12EFC5E24006B7EBE /* HaishinKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47EF52E02EFC5E24006B7EBE /* XCRemoteSwiftPackageReference "HaishinKit" */;
+			productName = HaishinKit;
+		};
+		47EF52E32EFC5E24006B7EBE /* RTMPHaishinKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47EF52E02EFC5E24006B7EBE /* XCRemoteSwiftPackageReference "HaishinKit" */;
+			productName = RTMPHaishinKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4786699F2EF8677F0068489F /* Project object */;
 }
