@@ -19,19 +19,11 @@
 			remoteGlobalIDString = 478669A62EF8677F0068489F;
 			remoteInfo = TestVideoStreaming;
 		};
-		478669C82EF867810068489F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4786699F2EF8677F0068489F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 478669A62EF8677F0068489F;
-			remoteInfo = TestVideoStreaming;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		478669A72EF8677F0068489F /* TestVideoStreaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestVideoStreaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		478669BD2EF867810068489F /* TestVideoStreamingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestVideoStreamingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		478669C72EF867810068489F /* TestVideoStreamingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestVideoStreamingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -58,11 +50,6 @@
 			path = TestVideoStreamingTests;
 			sourceTree = "<group>";
 		};
-		478669CA2EF867810068489F /* TestVideoStreamingUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TestVideoStreamingUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +69,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		478669C42EF867810068489F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -97,7 +77,6 @@
 			children = (
 				478669A92EF8677F0068489F /* TestVideoStreaming */,
 				478669C02EF867810068489F /* TestVideoStreamingTests */,
-				478669CA2EF867810068489F /* TestVideoStreamingUITests */,
 				478669A82EF8677F0068489F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,7 +86,6 @@
 			children = (
 				478669A72EF8677F0068489F /* TestVideoStreaming.app */,
 				478669BD2EF867810068489F /* TestVideoStreamingTests.xctest */,
-				478669C72EF867810068489F /* TestVideoStreamingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,29 +140,6 @@
 			productReference = 478669BD2EF867810068489F /* TestVideoStreamingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		478669C62EF867810068489F /* TestVideoStreamingUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 478669D82EF867810068489F /* Build configuration list for PBXNativeTarget "TestVideoStreamingUITests" */;
-			buildPhases = (
-				478669C32EF867810068489F /* Sources */,
-				478669C42EF867810068489F /* Frameworks */,
-				478669C52EF867810068489F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				478669C92EF867810068489F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				478669CA2EF867810068489F /* TestVideoStreamingUITests */,
-			);
-			name = TestVideoStreamingUITests;
-			packageProductDependencies = (
-			);
-			productName = TestVideoStreamingUITests;
-			productReference = 478669C72EF867810068489F /* TestVideoStreamingUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,10 +154,6 @@
 						CreatedOnToolsVersion = 16.4;
 					};
 					478669BC2EF867810068489F = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 478669A62EF8677F0068489F;
-					};
-					478669C62EF867810068489F = {
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 478669A62EF8677F0068489F;
 					};
@@ -227,7 +178,6 @@
 			targets = (
 				478669A62EF8677F0068489F /* TestVideoStreaming */,
 				478669BC2EF867810068489F /* TestVideoStreamingTests */,
-				478669C62EF867810068489F /* TestVideoStreamingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -241,13 +191,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		478669BB2EF867810068489F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		478669C52EF867810068489F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -271,13 +214,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		478669C32EF867810068489F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -285,11 +221,6 @@
 			isa = PBXTargetDependency;
 			target = 478669A62EF8677F0068489F /* TestVideoStreaming */;
 			targetProxy = 478669BE2EF867810068489F /* PBXContainerItemProxy */;
-		};
-		478669C92EF867810068489F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 478669A62EF8677F0068489F /* TestVideoStreaming */;
-			targetProxy = 478669C82EF867810068489F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -475,12 +406,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66W997F46F;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Pavlo-Bondar.TestVideoStreamingTests";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = "Pavlo-Bondar.TestVideoStreamingTests-iOS";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "Pavlo-Bondar.TestVideoStreamingTests-mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -493,49 +428,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66W997F46F;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Pavlo-Bondar.TestVideoStreamingTests";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = "Pavlo-Bondar.TestVideoStreamingTests-iOS";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "Pavlo-Bondar.TestVideoStreamingTests-mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestVideoStreaming.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestVideoStreaming";
-			};
-			name = Release;
-		};
-		478669D92EF867810068489F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Pavlo-Bondar.TestVideoStreamingUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestVideoStreaming;
-			};
-			name = Debug;
-		};
-		478669DA2EF867810068489F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Pavlo-Bondar.TestVideoStreamingUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestVideoStreaming;
 			};
 			name = Release;
 		};
@@ -565,15 +472,6 @@
 			buildConfigurations = (
 				478669D62EF867810068489F /* Debug */,
 				478669D72EF867810068489F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		478669D82EF867810068489F /* Build configuration list for PBXNativeTarget "TestVideoStreamingUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				478669D92EF867810068489F /* Debug */,
-				478669DA2EF867810068489F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

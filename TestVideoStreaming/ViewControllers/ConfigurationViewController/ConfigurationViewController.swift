@@ -42,7 +42,7 @@ class ConfigurationViewController: UIViewController, RootViewGettable {
         rootView?.actionButton.addTarget(self, action: #selector(didTapContinue), for: .touchUpInside)
     }
     
-    @objc private func didTapContinue() {
+    @objc func didTapContinue() {
         let url = rootView?.urlTextField.text ?? ""
         let key = rootView?.keyTextField.text ?? ""
         

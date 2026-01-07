@@ -31,8 +31,6 @@ final class StreamViewController: UIViewController, RootViewGettable {
         bindViewModel()
         
         if let rootView {
-            viewModel.connect(to: rootView.hkView)
-            
             // Connect view to the mixer once UI is loaded
             Task { @MainActor in
                 viewModel.connect(to: rootView.hkView)

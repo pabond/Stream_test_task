@@ -14,7 +14,7 @@ extension String {
     }
     
     var isValidStreamingUrl: Bool {
-        let rtmpRegex = #"^(rtmps?://)([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(:[0-9]+)?(/[a-zA-Z0-9._/-]*)?$"#
+        let rtmpRegex = #"^rtmps?://[a-zA-Z0-9\-\.]+(?::\d+)?(?:/[a-zA-Z0-9\._\-/]*)?$"#
         
         let predicate = NSPredicate(format: "SELF MATCHES %@", rtmpRegex)
         return predicate.evaluate(with: self)

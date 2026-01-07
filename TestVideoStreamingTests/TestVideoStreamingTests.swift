@@ -6,12 +6,46 @@
 //
 
 import Testing
+import Foundation
 @testable import TestVideoStreaming
 
 struct TestVideoStreamingTests {
 
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    // MARK: - Regex Tests
+    @Test("Valid RTMP links check")
+    func validateCorrectUrls() {
+        let urls = [
+            "rtmp://live.twitch.tv/app",
+            "rtmps://live-api-s.facebook.com:443/rtmp/",
+            "rtmp://1.1.1.1/live"
+        ]
+        
+        for url in urls {
+            #expect(url.isValidStreamingUrl == true, "URL \(url) should be valid")
+        }
     }
 
+    @Test("Invalid links check")
+    func validateIncorrectUrls() {
+        let urls = [
+            "http://google.com",
+            "rtmp://",
+            "not_a_url"
+        ]
+        
+        for url in urls {
+            #expect(url.isValidStreamingUrl == false, "URL \(url) should be invalid")
+        }
+    }
+
+    // MARK: - Storage Tests
+    @Test("Save data in UserDefaults")
+    func storageSaving() {
+        let storage = UserDefaultsStorage(defaults: .standard)
+        let testUrl = "rtmp://test.com/live"
+        
+        storage.urlString = testUrl
+        
+        #expect(storage.urlString == testUrl)
+    }
 }
