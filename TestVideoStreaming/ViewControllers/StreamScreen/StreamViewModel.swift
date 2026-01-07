@@ -41,10 +41,9 @@ final class StreamViewModel: ObservableObject {
         
         startNetworkMonitoring()
         
-        Task {
-            // Setup media once during initialization
-            try? await service.configureMediaStack()
-            await setupStatusObservation()
+        Task { [weak self] in
+            try? await self?.service.configureMediaStack()
+            await self?.setupStatusObservation()
         }
     }
 
@@ -178,15 +177,16 @@ final class StreamViewModel: ObservableObject {
 // MARK: - MTHKView Integration
 extension StreamViewModel: MTHKViewRepresentable.PreviewSource {
     nonisolated func connect(to view: MTHKView) {
-        Task { @MainActor in
-            self.mtView = view
+        Task { @MainActor [weak self] in
+            self?.mtView = view
             // Polling to ensure the hardware is ready before attaching the view
             for _ in 0...10 {
-                if service.isMixerReady {
-                    await service.mixer.addOutput(view)
+                if self?.service.isMixerReady == true {
+                    await self?.service.mixer.addOutput(view)
                     print("Preview successfully attached")
                     break
                 }
+                
                 try? await Task.sleep(nanoseconds: 500_000_000)
             }
         }
