@@ -14,6 +14,10 @@ struct Constants {
     static let buttonFontSize: CGFloat = 18
     static let buttonCornerRadius: CGFloat = 8
     
+    static let streamButtonSize: CGFloat = 60
+    static let controlButtonSize: CGFloat = 50
+    static let controlPadding: CGFloat = 50
+    
     struct IconsNames {
         static let mute = "mic.slash.fill"
         static let mic = "mic.fill"

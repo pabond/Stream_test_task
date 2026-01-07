@@ -81,7 +81,7 @@ final class StreamViewModel: ObservableObject {
         
         if currentStatus == .error {
             await service.resetStack()
-            // Important: restart observation for the NEW stream object
+            // restart observation for the stream object
             Task { await setupStatusObservation() }
         }
         
@@ -96,7 +96,7 @@ final class StreamViewModel: ObservableObject {
     // MARK: - Observation Logic
     private func setupStatusObservation() async {
         let streamToObserve = service.rtmpStream
-        // Simplified: removed redundant await before streamToObserve
+
         for await status in await streamToObserve.status {
             switch status.code {
             case "NetStream.Publish.Start":
